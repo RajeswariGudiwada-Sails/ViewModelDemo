@@ -1,0 +1,22 @@
+﻿
+@model ViewModelDemo.ViewModels.AnimalZooData
+
+@{
+    ViewData["Title"] = "Animals&Zoos List";
+}
+
+<h2> @TempData["msg"]</h2>
+<ul>
+    @foreach(var animal in Model.animals)
+    {
+        <li>@animal.Name </li>
+    }
+</ul>
+
+<h2> @ViewBag.lst</h2>
+<ul>
+    @foreach (var Zoo in Model.zoos)
+    {
+        <li>@Zoo.City </li>
+    }
+</ul>
